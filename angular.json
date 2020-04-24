@@ -24,9 +24,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/assets/css/style.css",
+              "src/assets/css/STS-risponsive.css",
+              "src/assets/css/smartcityTrackingSystem.css",
+              "src/assets/css/theme-default.css",
+              "./node_modules/font-awesome/css/font-awesome.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -48,7 +58,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
+                  "maximumWarning": "4mb",
                   "maximumError": "5mb"
                 },
                 {

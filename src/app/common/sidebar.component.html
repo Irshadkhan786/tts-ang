@@ -1,0 +1,86 @@
+<aside class="sidebar affix" >
+        <div class="sidebar-container">
+            <div class="sidebar-scrollpane">
+                <div class="sidebar-content">
+                    <div class="sidebar-profile clearfix">
+                        <a [routerLink]="'/dashboard'" class="pull-left">
+                            <figure class="profile-picture">
+                                    
+                                <img [src]="userimage" class="img-circle" alt="User Name">
+
+                            </figure>
+                        </a>
+                        <h5><strong>Welcome</strong></h5>
+                        <h6>{{username}}</h6>
+                    </div>
+                    <h4>Menu</h4>
+                    <nav class="main-nav">
+                        <ul id="sidebar-nav" class="sidebar-nav">
+                        
+                            <li routerLinkActive="active" class="">
+                                <a [routerLink]="['/dashboard']">
+                                    <i class="fa fa-tachometer fa-fw fa-lg"></i> Dashboard 
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="task-status.php">
+                                    <i class="fa fa-refresh fa-fw fa-lg"></i> Status Dashboard 
+                                </a>
+                            </li>
+                            <li class="">
+                                <a [routerLink]="['/support']">
+                                    <i class="fa fa-refresh fa-fw fa-lg"></i> Support 
+                                </a>
+                            </li>
+                           <!--  <li class="">
+                                <a href="add-items.php">
+                                    <i class="fa fa-info-circle fa-fw fa-lg"></i> Create New Task
+                                </a>
+                            </li>	
+                            <li class="">
+                                <a href="item-list.php">
+                                    <i class="fa fa-info-circle fa-fw fa-lg"></i> View Created Task
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="item-list-pending.php">
+                                    <i class="fa fa-info-circle fa-fw fa-lg"></i> Pending Task
+                                </a>
+                            </li>
+                            
+                            <li class="">
+                                <a href="open-issues.php">
+                                    <i class="fa fa-clock-o fa-fw fa-lg"></i> Open Task
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="closed-issues.php">
+                                    <i class="fa fa-tasks fa-fw fa-lg"></i> Closed Task
+                                </a>
+                            </li> -->
+                            
+                            <li class="">
+                                <a href="#"><i class="fa fa-gear fa-fw fa-lg"></i>Masters<span class="fa plus-times"></span></a>
+                                <ul class="">
+                                       <!--  <li class="">
+                                        <a href="add-source.php"><span class="icon"><img src="images/source-manegment.png" class="img-responsive"></span> Project Management</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="add-issue-category.php"><span class="icon"><img src="images/category-manegment.png" class="img-responsive"></span> Category Management</a>
+                                    </li>
+                                    <li  class="">
+                                        <a href="add_external_status.php"><span class="icon"><img src="images/external-status-manegment.png" class="img-responsive"></span> Task Status Management</a>
+                                    </li> -->
+                                    <li routerLinkActive="active" class="">
+                                        <a [routerLink]="['/user']"><span class="icon"><img src="images/user-manegment.png" class="img-responsive"></span> User Management</a>
+                                    </li>
+                                </ul>
+                            </li>	
+                        
+                           
+                        </ul><!-- sidebar-nav -->
+                    </nav>
+                </div><!-- sidebar-content -->
+            </div><!-- scrollpane -->
+        </div><!-- sidebar-container -->
+    </aside>

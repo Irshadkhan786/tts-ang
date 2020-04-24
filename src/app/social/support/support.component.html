@@ -1,0 +1,118 @@
+<div class="wrapper dashboard">
+    <!-- HEADER -->
+    
+    <tts_header></tts_header>
+    <!--side bar component-->
+    <!-- <aside class="sidebar affix" >
+        <div class="sidebar-container">
+            <div class="sidebar-scrollpane">
+                <div class="sidebar-content">
+                    <div class="sidebar-profile clearfix">
+                        <a [routerLink]="'/dashboard'" class="pull-left">
+                            <figure class="profile-picture">
+                                    
+                                <img [src]="userimage" class="img-circle" alt="User Name">
+    
+                            </figure>
+                        </a>
+                        <h5><strong>Welcome</strong></h5>
+                        <h6>{{username}}</h6>
+                    </div>
+                    <h4>Users</h4>
+                    <nav class="main-nav">
+                        <ul id="sidebar-nav" class="sidebar-nav">
+                        
+                            <li *ngFor="let user of userlist" (click)="activateToUser(user)" class="">
+                                <a *ngIf="user._id!=curr_user_id">
+                                    <i class="fa fa-tachometer fa-fw fa-lg"></i> {{user.name}} 
+
+                                    <span *ngIf="user.online == 'yes'" class="label label-success">  &nbsp;</span>
+                                </a>
+                                
+                            </li>
+                           
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </aside> -->
+    <!-- sidebar data ends here-->
+    
+    <!-- <div class="main">
+       
+       <div class="type_msg" style="min-height: 480px;border: 1px solid">
+        
+      </div>
+    
+        <input type="text" class="form-control" [(ngModel)]="message" >
+        <button (click)="sendMessage()" class="pull-right">Send Message</button>
+        
+    </div> -->
+
+    <!-- new chat page -->
+    <div id="frame" style="width: 100%;">
+        <div id="sidepanel" style="margin-top:70px">
+            <div id="profile">
+                <div class="wrap">
+                    <img id="profile-img" [src]="userimage" class="online" alt="" />
+                    <p>{{username}}</p>
+                    <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                    
+                
+                </div>
+            </div>
+            <div id="search">
+                <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                <input type="text" placeholder="Search contacts..." />
+            </div>
+            <div id="contacts">
+                <ul>
+                    
+                    <li *ngFor="let user of userlist" (click)="activateToUser(user)" [class.active]="user._id==toUserId" class="contact">
+                        <div *ngIf="user._id!=curr_user_id" class="wrap">
+                            <span class="contact-status" [class.online]="user.online=='yes'" ></span>
+                            <img [src]="this.imgBasepath+'user/'+user.userimage" alt="" />
+                            <div class="meta">
+                                <p class="name">{{user.name}}</p>
+                                <p class="preview" *ngIf="user.online=='no'">Last Seen {{user.last_seen | datetimefilter}}</p>
+                            </div>
+                        </div>
+                    </li>
+                
+                </ul>
+            </div>
+            
+        </div>
+        <div class="content">
+            <div class="contact-profile">
+                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                <p>Harvey Specter</p>
+            </div>
+            <div class="messages">
+                <ul class="message_list">
+                    <span *ngFor="let chat of chat_array">
+                    <li class="sent" *ngIf="chat.reciever_id == toUserId" >
+                        <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                        <p>{{chat.chat_text}}</p>
+                    </li>
+                    <li class="replies" *ngIf="chat.reciever_id == fromUserId">
+                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                        <p>{{chat.chat_text}}</p>
+                    </li>
+                </span>
+                </ul>
+            </div>
+            <div *ngIf="toUserId" class="message-input">
+                <div class="wrap">
+                <input type="text" class="user_msg" [(ngModel)]="message" placeholder="Write your message..." />
+                <!-- <i class="fa fa-paperclip attachment" aria-hidden="true"></i> -->
+                <button  (click)="sendMessage()" class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- new chat page ends here-->
+</div>
+
+<tts_footer></tts_footer>

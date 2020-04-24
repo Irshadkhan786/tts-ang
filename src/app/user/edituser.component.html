@@ -1,0 +1,188 @@
+<div class="wrapper dashboard">
+    <!-- HEADER -->
+    
+    <tts_header></tts_header>
+    <!-- HEADER -->
+    <!-- SIDEBAR -->
+    <sidebar></sidebar>
+    <div class="main">
+        <!-- CONTENT -->
+        <div id="content">
+            <div class="container-fluid">
+                <div class="pane">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="pull-right" style="font-size:14px;"><a routerLink="/userlist">View Registered Users</a></span>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="heading">
+                                <h2 class="m-l-15">Update User</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group alert {{responseClass}}">
+                        <div  id="responseMSG" *ngIf="formObj.errors" >{{formObj.errors.errKey}}</div>			   
+                    </div>
+                    
+                    <form [formGroup]="formObj" (ngSubmit)="submitUser()">
+                        
+
+                        <div class="expblock">
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Name <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label>
+                                        <input type="text" class="form-control hiddenclass" formControlName="user_name" name="user_name" maxlength="255"  id="user_name" value="" />
+                                        <span *ngIf="formObj.get('user_name').touched && formObj.get('user_name').errors">
+                                            <span style="color:red" *ngIf="formObj.get('user_name').errors.required">Username is required.</span>
+                                            <span style="color:red" *ngIf="formObj.get('user_name').errors.minlength"> Minimum {{formObj.get('user_name').errors.minlength.requiredLength}} characters are required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Email <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label>
+                                        <input type="text" class="form-control hiddenclass" formControlName="user_email" name="user_email" maxlength="255"  id="user_email"  value="" />
+                                        <span *ngIf="formObj.get('user_email').touched && formObj.get('user_email').errors">
+                                            <span style="color:red" *ngIf="formObj.get('user_email').errors.required">Email is required.</span>
+                                            <span style="color:red" *ngIf="formObj.get('user_email').errors.minlength"> Minimum {{formObj.get('user_email').errors.minlength.requiredLength}} characters are required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Phone Number <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label>
+                                        <input type="text" class="form-control hiddenclass" formControlName="user_phone"  maxlength="13" id="user_phone" name="user_phone" value="">
+                                        <span *ngIf="formObj.get('user_phone').touched && formObj.get('user_phone').errors">
+                                            <span style="color:red" *ngIf="formObj.get('user_phone').errors.required">Phone Number is required.</span>
+                                            <span style="color:red" *ngIf="formObj.get('user_phone').errors.minlength"> Minimum {{formObj.get('user_phone').errors.minlength.requiredLength}} characters are required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="">Organisation <!-- <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span> --></label>
+                                        <input type="text" class="form-control hiddenclass" formControlName="user_org" name="user_org" id="user_org" maxlength="255" value="" />
+                                        <span *ngIf="formObj.get('user_org').touched && formObj.get('user_org').errors">
+                                            <span style="color:red" *ngIf="formObj.get('user_org').errors.required">Organisation is required.</span>
+                                            <span style="color:red" *ngIf="formObj.get('user_org').errors.minlength">Minimum Minimum {{formObj.get('user_org').errors.minlength.requiredLength}} characters are required.</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                    
+
+                                <div class="col-md-6" >
+                                    <div class="form-group">
+                                        <label for="">User Image</label>
+                                        <input type="file" class="form-control hiddenclass" formControlName="user_img"  (change)="addImage($event)" id="user_img"  />
+                                        <img *ngIf="imageUrl" [width]="100" [height]="100" [src]="imageUrl">
+                                        
+                                        <span *ngIf="imageUploadError[0]">
+                                            <span style="color:red" *ngIf="imageUploadError[0].type_error">{{imageUploadError[0].type_error}}</span>
+                                            <span style="color:red" *ngIf="imageUploadError[0].size_error">{{imageUploadError[0].size_error}}</span>
+                                        </span>
+                                    </div>
+                                </div>									
+                                <div class="col-md-6" >
+                                    <div class="form-group">
+                                        <label for="">Role <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label><br>
+                                        <div class="radio-container">
+                                           
+                                                <label class="radio-inline">
+                                                    <input type="radio" class="user_role" formControlName="user_role"   [value]=1 /> Admin
+                                                </label>
+                                                <label class="radio-inline">
+                                                    <input type="radio" class="user_role"  formControlName="user_role"  [value]=2 /> Approver
+                                                </label>
+                                                <span *ngIf="formObj.get('user_role').touched && formObj.get('user_role').errors">
+                                                    <span style="color:red" *ngIf="formObj.get('user_role').errors.required">User Role is required.</span>
+                                                </span>
+                                            </div>		
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                        
+                                            <div class="col-md-6" >
+                                                <div class="form-group">
+                                                    <label for="">Status <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label><br>
+                                                    <div class="radio-container">
+                                                        <label class="radio-inline">
+                                                            <input type="radio" class="" formControlName="status" [value]=1 /> Active
+                                                        </label>
+                                                        <label class="radio-inline">
+                                                            <input type="radio" class=""  formControlName="status" [value]=0 />Inactive
+                                                        </label>
+                                                        <span *ngIf="formObj.get('status').touched && formObj.get('status').errors">
+                                                            <span style="color:red" *ngIf="formObj.get('status').errors.required">User Role is required.</span>
+                                                        </span>
+                                                    </div>											
+                                                </div>
+                                            </div>
+                                        
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="expblock">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">User Id <span class="asterisk"><i class="fa fa-asterisk" aria-hidden="true"></i></span></label>
+                                                    <input type="text" class="form-control hiddenclass" formControlName="userId" maxlength="255" id="userId" name="userId" value="">
+                                                    <span *ngIf="formObj.get('userId').touched && formObj.get('userId').errors">
+                                                        <span style="color:red" *ngIf="formObj.get('userId').errors.required">User Id is required.</span>
+                                                        <span style="color:red" *ngIf="formObj.get('userId').errors.minlength"> Minimum {{formObj.get('userId').errors.minlength.requiredLength}} characters are required.</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="">User Password</label>
+                                                    <input type="password" class="form-control hiddenclass" formControlName="password" maxlength="13" id="password" name="password" value="">
+                                                    <span *ngIf="formObj.get('password').touched && formObj.get('password').errors">
+                                                        
+                                                        <span style="color:red" *ngIf="formObj.get('password').errors.minlength">Minimum {{formObj.get('password').errors.minlength.requiredLength}} characters are required.</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                                
+                                <div class="row btn_grp">
+                                    <div class="form-group col-md-12 text-center">
+                                            <!-- [disabled]="!formObj.valid" -->
+                                        <button type="submit" class="btn btn-info btn-lg" [disabled]="!formObj.valid" name="add_user" value="ADD_USER_NOW"> Update User </button>
+                                    </div> 
+                                </div>
+                            </form>
+                        </div>
+
+                   </div><!-- container-fluid -->
+                </div><!-- content -->
+            </div>
+</div><!-- main div ends here-->
+  <!-- Modal -->
+  <div class="modal fade" id="edit_user" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p innerHtml="{{updateResponse}}"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Delete success model ends here-->
+<tts_footer></tts_footer>
+<ngx-spinner bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="red"
+type="ball-scale-multiple"></ngx-spinner>

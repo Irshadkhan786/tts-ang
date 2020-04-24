@@ -1,0 +1,470 @@
+@media (min-width: 2600px) {}
+
+@media (min-width: 2700px) {}
+
+@media (min-width: 1800px) {}
+
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px */ 
+@media (min-width: 1025px) and (max-width: 1366px) {
+   
+}
+
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px */  
+@media (min-width: 768px) and (max-width: 1024px) { 
+.pane .col-md-12{min-height:   20px;} 
+.navbar-header .logo.pull-left{float: right !important}     
+ .header-navbar .navbar-toggle {padding-top:8px;}
+   .navbar-header {position: relative;z-index: 999;}
+.sidebar-switch .fa{line-height:50px;}
+.row.smtchart .col-md-6.chardHeadindCol{width:  100% !important}
+.pane .col-md-12{min-height:   20px;}                                                                          
+.navbar-right{margin-top:  -10px;}
+ .PendingRemark{    top: 0px !important;}       
+}
+
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* login page */
+  .TaskTrackingloginCol {background: linear-gradient(to right, rgba(241, 39, 17, 0.34), rgba(245, 175, 25, 0.5)); padding: 0 !important;}
+.display-3 {margin-top: 0 !important;font-size: 25px !important;letter-spacing: 3px !important;}
+.member-container-inside { width: 323px !important;top: 30px !important;}
+.member-container-inside h4 {display: none;}.app-logo img {margin-bottom: 32px;position: relative;top: 0 !important;}
+.TaskTrackingloginRow { height: 75vh !important;}
+/* login page end */
+
+/* dashboard */
+  .Dashboard_name h5{    display: none;  }
+  aside.sidebar.affix{    z-index:inherit;  }
+  a.logo.pull-left img {width: 163px !important;position: relative;left: 23%;top: 4px;}
+.header-navbar .navbar-toggle {color: #003366;position: relative;top: 13px;font-size: 31px !important;left: 12px;}
+.header-navbar .navbar-collapse {background-color: #fff !important;position: relative;top: 27px;box-shadow: 0 5px 6px -5px !important;}
+.header-navbar .navbar-nav>li>a {position: relative;background: #fff;color: #262222;box-shadow: inset 0 0 4px rgba(25, 23, 23, 0.4), rgba(255, 255, 255, 0.61) 0 1px 0;right: 16px;top: 0px !important;padding: 3px 47px !important;border: 1px solid #706f6f;}
+.sidebar-switch {
+background-color: #003366;
+position: relative;
+top: 13px;
+right: 10px;
+}
+.First_stRowSCTR .col-md-8 {
+width: 100% !important;
+margin-bottom: -75px;
+bottom: 98px;
+left: 10%;
+}
+.row.smartCityTrackingRow .col-md-3:nth-child(7) .col-md-8 {
+left: 16%;
+}
+.smartCityTrackingRow .col-md-3 {
+position: relative;
+left: 5%;
+}
+}
+
+
+/* #Device = Low Resolution Tablets, Mobiles (Landscape)  ##Screen = B/w 481px to 767px  */  
+@media (min-width: 481px) and (max-width: 767px) {     
+  
+  /* login page */
+  .TaskTrackingloginCol {
+    background: linear-gradient(to right, rgba(241, 39, 17, 0.34), rgba(245, 175, 25, 0.5));
+    padding: 0 !important;
+}
+.display-3 {
+  margin-top: 0 !important;
+  font-size: 25px !important;
+  letter-spacing: 3px !important;
+}
+.member-container-inside { 
+width: 323px !important;
+top: 30px !important;  
+}
+.member-container-inside h4 {
+display: none;
+}
+.app-logo img {
+margin-bottom: 32px;
+position: relative;
+top: 0 !important;
+}
+.TaskTrackingloginRow { 
+height: 75vh !important;
+}
+/* end of login page */
+ 
+  .Dashboard_name h5{
+    display: none;
+  }
+  aside.sidebar.affix{
+    z-index:inherit;
+  }
+a.logo.pull-left img {
+    width: 153px !important;
+    /* position: relative; */
+    /* left: 23%; */
+    top: 6px;
+    margin: auto;
+    margin-top: -2px !important;
+}
+.header-navbar .navbar-toggle {
+  color: #003366;
+  position: relative;
+  top: 13px;
+  font-size: 31px !important;
+  left: 12px;
+}
+.header-navbar .navbar-collapse {
+background-color: #fff !important;
+position: relative;
+top: 27px;
+box-shadow: 0 5px 6px -5px !important;
+}
+.header-navbar .navbar-nav>li>a {
+position: relative;
+background: #fff;
+color: #262222;
+box-shadow: inset 0 0 4px rgba(25, 23, 23, 0.4), rgba(255, 255, 255, 0.61) 0 1px 0;
+right: 16px;
+top: 0px !important;
+padding: 3px 47px !important;
+border: 1px solid #706f6f;
+}
+.sidebar-switch {
+background-color: #003366;
+position: relative;
+top: 13px;
+right: 10px;
+}
+.First_stRowSCTR .col-md-8 {
+width: 100% !important;
+margin-bottom: -75px;
+bottom: 98px;
+left: 10%;
+}
+.row.smartCityTrackingRow .col-md-3:nth-child(7) .col-md-8 {
+left: 16%;
+}
+.smartCityTrackingRow .col-md-3 {
+position: relative;
+left: 5%;
+}
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px */  
+@media (min-width: 320px) and (max-width: 480px) {    
+.smartCityTrackingRow .First_stRowSCTR{max-height: 108px;}
+.adminHomeCartText{font-size:14px !important;}
+
+.col-md-4.Seventh_col + .col-md-8 p{padding: 0 30px !important;}
+  /* login page */
+  .TaskTrackingloginCol {
+    background: linear-gradient(to right, rgba(241, 39, 17, 0.34), rgba(245, 175, 25, 0.5));
+    padding: 0 !important;
+}
+.display-3 {
+  margin-top: 0 !important;
+  font-size: 25px !important;
+  letter-spacing: 3px !important;
+  padding: 10px 0;
+}
+.member-container-inside { 
+width: 323px !important;
+top: 30px !important;  
+}
+.member-container-inside h4 {
+display: none;
+}
+.app-logo img {
+position: relative;
+top: 0 !important;
+  margin-bottom: 32px;
+}
+li.turn-off a {
+  box-shadow: none !important;
+  border: 1px solid !important;
+}
+.TaskTrackingloginRow { 
+height: 75vh !important;
+}
+/* end of login page */
+
+  .Dashboard_name h5{
+    display: none;
+  }
+  aside.sidebar.affix{
+    z-index:9;
+  }
+a.logo.pull-left img {
+      width: 153px !important;
+    /* position: relative; */
+    /* left: 23%; */
+    top: 6px;
+    margin: auto;
+    margin-top: -2px !important;
+}
+.header-navbar .navbar-toggle {
+  color: #003366;
+  position: relative;
+  top: 13px;
+  font-size: 31px !important;
+  left: 12px;
+}
+.header-navbar .navbar-collapse {
+background-color: #fff !important;
+position: relative;
+top: 27px;
+box-shadow: 0 5px 6px -5px !important;
+}
+.header-navbar .navbar-nav>li>a {
+position: relative;
+background: #fff;
+color: #262222;
+box-shadow: inset 0 0 4px rgba(25, 23, 23, 0.4), rgba(255, 255, 255, 0.61) 0 1px 0;
+right: 16px;
+top: 0px !important;
+padding: 3px 47px !important;
+border: 1px solid #706f6f;
+}
+.sidebar-switch {
+background-color: #003366;
+position: relative;
+top: 13px;
+right: 10px;
+}
+.First_stRowSCTR .col-md-8 {
+width: 100% !important;
+margin-bottom: -75px;
+bottom: 98px;
+left: 10%;
+}
+.row.smartCityTrackingRow .col-md-3:nth-child(7) .col-md-8 {
+left: 16%;
+}
+.smartCityTrackingRow .col-md-3 {
+position: relative;
+left: 5%;
+}
+.smchartHeading, .smchartHeading2 {   
+padding: 0px 0px 0px 0px !important;
+margin-bottom: 0px !important; 
+margin-left: 10px !important;
+margin-right: -17px !important;
+border-radius: 18px;
+font-weight: bold;
+font-size: 29px !important;
+}
+#Pi3Chr1, #Pi3Chr2, #Pi3Chr3, #Pi3Chr4 {  
+width: 98% !important;
+}
+.tableRowSTM {
+width: 98% !important;
+}
+.chartHeading { 
+font-size: 17px !important;
+padding: 10px 0 0 0;
+}
+.projecttable {
+margin-left: 18px !important;
+margin-right: 0px !important;   
+font-size: 29px !important;
+}
+.radioBoxFrom {
+  display: grid;
+  text-align: justify;
+  position: relative;
+  left: 8%;
+}
+.row.checkBoxRow {
+left: 6% !important;
+}
+.filterButton {
+  width: 100% !important;
+  padding: 6px;
+  font-size: 19px;
+  letter-spacing: 2px;
+  background: #d45206bf;
+  border-radius: 0px !important;
+}
+.row.filterRow {
+  display: contents;
+}
+.row.checkBoxRow {
+  background: transparent !important;
+}
+.row.checkBoxRow .col-md-12 span {
+  background: #fff;
+  margin: 10px;
+  padding: 10px;
+}
+ .row.filterRow .col-md-2{
+    margin: 10px;
+  }
+  .timeline .timeline-icons .timeline-sm{
+    margin: 0px !important;
+    width: 223px !important;
+  }
+}
+
+@media only screen and (max-width:767px){
+   .uerviseListGrid>.col-md-4{width:  100% !important}                                        
+.navbar-toggle .fa, .sidebar-switch .fa{line-height: 50px}
+ .pane .col-md-12{min-height:   20px;}                                          
+.tableRowSTM{overflow:  hidden}
+
+.PendingRemark{left:0px !important; top:0px !important;}
+.row.smtchart .col-md-6.chardHeadindCol{width:   100% !important; overflow-x:scroll;}
+.tableRowSTM {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.tableRowSTM .col-md-12 {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+#pichart_div, #pichart_div1,  #pichart_div3,  #pichart_div4
+{
+  width: 100%;
+  position: relative;
+  left: -67px;
+
+ }
+ ul.dtr-details {
+  display: block !important;
+}
+.timeline .timeline-icons .timeline-sm{
+  margin: 0px !important;
+  width: 223px !important;
+}
+
+ /* #pichart_div3
+{
+     width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+ }
+
+  #pichart_div4
+{
+     width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+ } */
+
+ .navbar-toggle.collapsed{margin-top:10px;}
+}
+
+
+@media only screen and (min-width:1200px) and (max-width:1350px){
+   .container{max-width: 100%} 
+   .col-md-6.chardHeadindCol {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+}
+
+
+
+ul.labeling{    margin-top: 30px;}
+ul.labeling li{
+
+ display: inline;
+    padding-left: 20px;                
+               }
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1204px){
+.First_stRowSCTR .col-md-4{    padding: 33px !important;}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1170px){
+.col-md-6.chardHeadindCol{overflow-x:scroll; overflow-y:hidden;}
+.container-fluid{margin-left: 260px !important; max-width: 800px}                                                                                   
+.container.smartCityTrackingContainer{margin-left: 260px; max-width: 800px}
+.smartCityTrackingRow .col-md-3{width: 33.33% !important}
+}
+
+@media only screen and (min-width: 991px) and (max-width: 1024px)
+{
+.smartCityTrackingRow .First_stRowSCTR{max-height: 110px;}
+
+.First_stRowSCTR .col-md-4 {
+    border-radius: 10px;
+    padding: 35px 15px !important;
+    width: 27% !important;
+}
+.col-md-4.Seventh_col + .col-md-8 p {
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+    font-size: 14px;
+    padding: 0 15px;
+} 
+.adminHomeCartText
+  { font-size: 14px !important;}  
+ 
+ }
+
+
+ @media only screen and (min-width: 768px) and (max-width: 768px)
+{
+.uerviseListGrid>.col-md-4 {
+    width: 49% !important;
+   }
+}
+
+.usercard {height:  263px !important; border-bottom: 0px !important;}
+.card-img-top {
+        width: 120px !important;
+    height: 120px !important;           
+ }
+ .uerviseListContainer
+ {
+text-align:   center;
+  }
+
+.uerviseListContainer .col-md-4
+{
+   width: 32.333333%;
+    display: inline-block;
+    float: none !important;
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out;
+    
+ }
+
+.card-title {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.userrole
+{
+   color: #d45206;
+    font-size: 12px;
+    font-weight: bold;
+ }
+
+ .uerviseListGrid.usersscorewrap {
+    width: 94%;
+    position: relative;
+    top: 20px;
+    margin: 30px;
+    max-width: 829px;
+    margin: auto;
+}
+
+.card-img-top
+{
+ border: 2px solid #e2e1e1;
+     transition: all 0.5s ease-in-out;
+}
+ 
+table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td:first-child:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th:first-child:before {
+    top: inherit !important;
+    
+}

@@ -1,0 +1,4 @@
+<form [formGroup]="formObj" (ngSubmit)="submitForm()">
+    <input type="file" formControlName="profile_pic" (change)="getImageData($event)" >
+    <input type="submit" value="Submit">
+</form>

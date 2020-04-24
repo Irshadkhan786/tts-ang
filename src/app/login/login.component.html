@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from cazylabs.com/themes-demo/quarca/page-login.html by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 26 Mar 2015 07:26:41 GMT -->
+<!-- Added by HTTrack --><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><![endif]-->
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>TTS</title>
+	
+	<!-- Styling -->
+	
+
+	<style>
+	      .member-container-inside .app-logo {
+      margin-bottom: -15px;
+      }
+      .member-container-inside {
+      position: relative;
+      width: 400px;
+      top:-57px;
+      margin: 0 auto;
+      padding: 0 0 11px 0;
+      /* background: rgba(0,0,0,0.7); */
+      background: #f1ebeb3d;
+      box-shadow: 0 0 5px #222222;
+      -webkit-box-shadow: 0 0 5px #222222;
+      -moz-box-shadow: 0 0 5px #222222;
+      -ms-box-shadow: 0 0 5px #222222;
+      -o-box-shadow: 0 0 5px #222222;
+      border-top: 30px   linear-gradient(to right, rgb(241, 39, 17), rgb(245, 175, 25));
+    }
+    .member-container-inside h4 {
+      background: #fff;
+      color: #ffffff;
+      padding: 10px;
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      top: 26px;
+	  visibility: hidden;
+    }
+    .TaskTrackingloginRow{
+      background: #eeeeee80;
+      height: 383px;
+      position: relative;
+      top: 20px;
+      box-shadow: 0 0 5px -3px;
+    }
+   
+    .display-3{
+      text-align: center;
+      margin-top: 3.5%;
+      font-size: 51px;
+      font-weight: bold;
+      color: #ce4913;
+      letter-spacing: 3px;
+      word-spacing: 9px;
+      font-family: Georgia;
+    }
+    .TaskTrackingloginCol{
+      background: #fff;
+      padding: 147px 0;
+    }
+
+    .STSlogo img{      
+             width: 24%;
+             border-radius: 12px;
+    }
+      .app-logo img{
+    position: relative;
+    width: 20%;
+    top: -45px;
+    }
+
+	</style>
+    </head>
+    
+    <!--<body class="page-membership">-->
+    <body>
+	<!-- Preloader -->
+	<!-- <div id="preloader"><div id="status">&nbsp;</div></div> -->
+	
+	<div class="wrapper">
+	    <div class="container-fluid">
+	    	 <div class="text-center STSlogo" >
+		  	 	  <img src="assets/img/core/logo1.png" alt="">
+		  	 </div>
+		  <div class="row TaskTrackingloginRow"> 		  	
+		   <div class="col-md-6 TaskTrackingloginCol text-center">		  
+		       <h2 class="display-3">
+			      Task Tracking System
+			   </h2>
+		   </div>
+
+		   <div class="col-md-6">
+		   <div class="member-container">
+		     <div class="member-container-inside">
+			<h4></h4>
+			<div class="app-logo">
+			  <img src="assets/img/icons/login.svg" style="width: 20%;" alt="LOGO" />			    
+      </div> 
+      <!-- <span *ngIf="username.touched && username.errors">
+        <span *ngIf="username.errors.required">Username is Required</span>
+      </span> -->
+			<div id="errorClass" *ngIf="username.touched && username.errors" style="background-color: #FFEBE8; color:#FF0000;font-size:14px; text-align:center;line-height:30px">
+        <span *ngIf="username.errors.required">Please enter Username</span>
+      </div>
+      <div id="errorClass" *ngIf="password.touched && password.errors" style="background-color: #FFEBE8; color:#FF0000;font-size:14px; text-align:center;line-height:30px">
+        <span *ngIf="password.errors.required">Please enter Password</span>
+      </div>
+      <div style="background-color: #FFEBE8; color:#FF0000;font-size:14px; text-align:center;line-height:30px" *ngIf="isLogin">
+        Invalid Username/Password
+      </div>
+
+		     	<form name="login" class="form-horizontal" #formObj="ngForm" (ngSubmit)="submtLogin(formObj)" >
+					<div class="form-group add-style">
+					     <input type="text" ngModel #username="ngModel" required class="form-control" id="username" name="username" value="" placeholder="Username"/>
+            
+              </div>
+					
+					<div class="form-group add-style">
+					   	<input type="password" ngModel #password="ngModel" required class="form-control" value="" id="password" name="password" placeholder="Password"/>
+					</div>
+					<div class="form-group add-style">
+						<input type="submit" [disabled]="!formObj.valid" class="btn btn-success btn-block"  name="action" value="Login"/>					   
+					</div>
+			    </form>
+				<p style="text-align:center;color:#666 !important; font-weight:400; font-size:13px;">Powered By: PricewaterhouseCoopers India Pvt. Ltd.</p>
+			</div><!-- member-container-inside -->
+			</div><!-- member-container -->
+		   </div>
+		  </div>
+		</div>
+	    
+	    
+	</div><!-- wrapper -->
+	
+        <!-- REQUIRED SCRIPTS -->
+	<!-- <script src="vendor/jquery/jquery-1.11.2.min.js"></script>
+	<script src="vendor/plugins/others/jquery-cookie/jquery.cookie.js"></script> -->
+	
+
+
+    </body>
+</html>
